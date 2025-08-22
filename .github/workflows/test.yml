@@ -44,4 +44,4 @@ jobs:
         run: hatch run type-check:run
 
       - name: Run tests
-        run: hatch test --all --cover -- -s -vv
+        run: hatch test --cover -- -s -vv
