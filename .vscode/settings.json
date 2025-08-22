@@ -1,0 +1,33 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit",
+        }
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4
+    },
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "evenBetterToml.formatter.allowedBlankLines": 1,
+    "evenBetterToml.formatter.arrayAutoExpand": true,
+    "evenBetterToml.formatter.arrayTrailingComma": true,
+    "evenBetterToml.formatter.indentString": "    ",
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/__pycache__": true,
+        ".*_cache": true,
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.testing.pytestArgs": [
+        "./tests"
+    ],
+    "python.testing.pytestEnabled": true,
+}
