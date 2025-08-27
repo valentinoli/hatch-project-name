@@ -104,12 +104,9 @@ version = metadata.version(distribution_name)
 Or you might simply want to log the name.
 
 ```py
-import logging
-
-logger = logging.getLogger()
-
 project_name = "my-project"
-logger.info(f"Project name: {project_name}")
+
+print(f"Project name: {project_name}")
 ```
 
 The Python standard library does not provide a standardized function to programmatically access the current project/distribution name that works without limitations. This is because, as quoted above, no relationship is enforced between the name of a distribution package and the importable import packages it provides. You can of course just hardcode the project/distribution name as in the examples above, but this is not ideal since it is preferable to maintain `pyproject.toml` as the single source of truth for your project metadata.
