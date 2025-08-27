@@ -33,6 +33,8 @@ jobs:
     needs:
     - build
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
 
     steps:
     - uses: actions/download-artifact@v5
@@ -43,6 +45,5 @@ jobs:
     - name: Push build artifacts to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        skip-existing: true
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+        verbose: true
+        print-hash: true
