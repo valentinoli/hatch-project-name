@@ -105,7 +105,6 @@ Or you might simply want to log the name.
 
 ```py
 project_name = "my-project"
-
 print(f"Project name: {project_name}")
 ```
 
