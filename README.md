@@ -61,7 +61,7 @@ Building the project will generate the file
 Now you can import the project name:
 
 ```py
-from my_project import project_name
+from my_project._name import project_name
 
 print(project_name)
 ```
