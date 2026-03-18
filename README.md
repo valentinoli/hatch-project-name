@@ -22,9 +22,13 @@ This provides a build hook plugin for [Hatch](https://github.com/pypa/hatch) tha
 
 The [build hook plugin](https://hatch.pypa.io/latest/plugins/build-hook/reference/) name is `project-name`.
 
-Define your project name in `pyproject.toml`:
+Add the hook as a build requirement and define your project name in `pyproject.toml`:
 
 ```toml
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling", "hatch-project-name"]
+
 [project]
 name = "my-project"
 ```
@@ -35,7 +39,6 @@ Then configure the build hook:
 
     ```toml
     [tool.hatch.build.hooks.project-name]
-    dependencies = ["hatch-project-name"]
     name-file = "src/my_project/_name.py"
     ```
 
@@ -43,7 +46,6 @@ Then configure the build hook:
 
     ```toml
     [build.hooks.project-name]
-    dependencies = ["hatch-project-name"]
     name-file = "src/my_project/_name.py"
     ```
 
